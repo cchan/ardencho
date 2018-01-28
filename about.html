@@ -6,6 +6,7 @@ title: About
 <style>
   body>main{
     background-color: #ccc;
+    /*background-image: ???*/
   }
   #aboutme{
     font-family: Lato;
@@ -16,6 +17,13 @@ title: About
     overflow: hidden;
     padding-bottom: 5em;
     position: relative;
+  }
+  @media(max-aspect-ratio: 1/1){
+    #aboutme{
+      width: 90%;
+      font-size: 1.5em;
+      margin-top: 10em;
+    }
   }
   #aboutme header{
     text-align: center;
