@@ -12,7 +12,66 @@
   <meta name="web_author" content="Clive Chan">
 
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato:300,700" rel="stylesheet">
-  <link href="styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <style>
+  body{
+    font-size: 1.2vw;
+  }
+  body>header{
+    background-color: white;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    height: 3em;
+    line-height: 3em;
+    box-shadow: 0 0 0.7em 0 black;
+    color: black;
+    z-index: 5000;
+    overflow: visible;
+    transition: box-shadow 0.5s;
+  }
+  body>header h1{
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 300;
+    padding: 0 0.5em;
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 0.05em;
+    float: left;
+  }
+  body>header h1 span{
+    font-weight: 700;
+  }
+  body>main{
+    position: fixed;
+    top: 3em;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  body>header nav{
+    font-family: Lato, Arial, sans-serif;
+    float: right;
+    font-weight: bold;
+  }
+  body>header nav a{
+    text-decoration: none;
+    color: gray;
+    transition: color 0.3s, background-color 0.3s;
+    display: inline-block;
+    padding: 0 1em;
+  }
+  body>header nav a.current{
+    background-color: #eee;
+  }
+  body>header nav a:hover{
+    color:black;
+    background-color: #ccc;
+  }
+  </style>
   
   <script>
     //https://stackoverflow.com/a/11381730
@@ -25,12 +84,12 @@
   <header>
     <h1>ARDEN <span>CHO</span></h1>
     <nav>
-      <a href="index.html">home</a><!--
-      --><a href="about.html">about</a><!--
-      --><a href="music.html">music</a><!--
-      --><a href="acting.html">acting</a><!--
-      --><a href="modeling.html">modeling</a><!--
-      --><a href="blogsvlogs.html">blogs &amp; vlogs</a>
+      <a href="index.html" {% if page.title == "Home" %} class="current" {% endif %} >home</a><!--
+      --><a href="about.html" {% if page.title == "About" %} class="current" {% endif %} >about</a><!--
+      --><a href="music.html" {% if page.title == "Music" %} class="current" {% endif %} >music</a><!--
+      --><a href="acting.html" {% if page.title == "Acting" %} class="current" {% endif %} >acting</a><!--
+      --><a href="modeling.html" {% if page.title == "Modeling" %} class="current" {% endif %} >modeling</a><!--
+      --><a href="blogsvlogs.html" {% if page.title == "Blogs & Vlogs" %} class="current" {% endif %} >blogs &amp; vlogs</a>
     </nav>
   </header>
   <main>
