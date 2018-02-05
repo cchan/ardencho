@@ -3,7 +3,105 @@ layout: default
 title: Modeling
 ---
 
+<style>
+main{
+  overflow: hidden;
+}
+.imgbox{
+  display: inline-block;
+  width: 35em;
+  height: 60em;
+  transform: rotate(20deg);
+  border: solid 1px #333;
+  position: absolute;
+  top: -10em;
+  margin-left: -20em;
+  filter: grayscale(100%);
+  transition: transform 1s, filter 0.5s;
+  background-color: rgba(100,100,100,0.7);
+}
+.imgbox:hover{
+  filter: none;
+}
+#imgbox1{ left: 0vw; z-index: 4; }
+#imgbox2{ left: 18vw; z-index: 3; }
+#imgbox3{ left: 36vw; z-index: 2; }
+#imgbox4{ left: 54vw; z-index: 1; }
+#imgboxes:hover .imgbox{
+  transform: translate(-8em, 0) rotate(20deg);
+}
+#imgboxes:hover .imgbox:hover, #imgboxes:hover .imgbox:hover ~ .imgbox{
+  transform: translate(10em, 0) rotate(20deg);
+}
+#infotitle{
+  position: absolute;
+  right: -1.5em;
+  top: 1.5em;
+  transform: rotate(90deg);
+  font-size: 14vh;
+  padding: 0.3em;
+  margin: 0;
+}
+#infotext{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 2em;
+  font-size: 1.5em;
+  width: 8em;
+  text-align: right;
+  margin: 0;
+}
+.imgbox .img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.imgbox .img:first-of-type{
+  opacity: 1;
+}
+</style>
+
+<div id="imgboxes">
+  <a href="https://youtu.be/8HXYCv5owME" id="imgbox1" class="imgbox">
+    <div class="img" style="background-image:url('1a.jpg')"></div>
+    <!--div class="img" style="background-image:url('1b.jpg')"></div-->
+    <!--div class="img" style="background-image:url('1c.jpg')"></div-->
+  </a>
+  <a href="https://youtu.be/VTroQnlwo9g" id="imgbox2" class="imgbox">
+    <div class="img" style="background-image:url('2a.jpg')"></div>
+    <!--div class="img" style="background-image:url('2b.jpg')"></div-->
+    <!--div class="img" style="background-image:url('2c.jpg')"></div-->
+  </a>
+  <a href="https://youtu.be/lIsrbxOCKqw" id="imgbox3" class="imgbox">
+    <div class="img" style="background-image:url('3a.jpg')"></div>
+    <!--div class="img" style="background-image:url('3b.jpg')"></div-->
+    <!--div class="img" style="background-image:url('3c.jpg')"></div-->
+  </a>
+  <a href="https://youtu.be/z1DNh7i5ewo" id="imgbox4" class="imgbox">
+    <div class="img" style="background-image:url('4a.jpg')"></div>
+    <!--div class="img" style="background-image:url('4b.jpg')"></div-->
+    <!--div class="img" style="background-image:url('4c.jpg')"></div-->
+  </a>
+</div>
+
+<h2 id="infotitle">modeling</h2>
+<p id="infotext"><b>I do photoshoots.</b> Click for videos!</p>
+
 <ul>
   <li>three slanted boxes overlapping</li>
-  <li>they slide out on mouseover</li>
+  <li>onmouseover: <ul>
+      <li>Starts animating the background, swapping between different angles of the same shot</li>
+      <li>Expands the current one (that is, moves the adjacent ones away)</li>
+      <li>Each one is a clickable link to the relevant blog post</li>
+      <li>optional: start blackandwhite, go to color on hover</li>
+    </ul>
+  </li>
 </ul>
+
+<script>
+
+</script>
