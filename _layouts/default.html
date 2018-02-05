@@ -111,6 +111,8 @@
       background-color: green !important;
     }
   }
+  
+  .isNotMobile .onlyOnMobile{ display: none; }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113164918-1"></script>
   <script>
@@ -148,5 +150,11 @@
   <main>
     {{ content }}
   </main>
+  <script>
+    if(isMobile)
+      document.body.classList.add("isMobile");
+    else
+      document.body.classList.add("isNotMobile");
+  </script>
 </body>
 </html>

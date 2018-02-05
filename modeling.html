@@ -12,7 +12,7 @@ main{
   width: 35em;
   height: 60em;
   transform: rotate(20deg);
-  border: solid 1px #333;
+  border: solid 0.1em #666;
   position: absolute;
   top: -10em;
   margin-left: -20em;
@@ -52,6 +52,22 @@ main{
   text-align: right;
   margin: 0;
 }
+@media(max-aspect-ratio: 1/1){
+  #infotitle{
+    transform: none;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1em;
+    font-size: 4em;
+    padding: 0.75em;
+  }
+  #infotext{ width: 100%; }
+  #imgbox1{ left: -6vw; }
+  #imgbox2{ left: 18vw; }
+  #imgbox3{ left: 42vw; }
+  #imgbox4{ left: 66vw; }
+}
 .imgbox .img{
   height: 100%;
   width: 100%;
@@ -89,7 +105,7 @@ main{
 </div>
 
 <h2 id="infotitle">modeling</h2>
-<p id="infotext"><b>I do photoshoots.</b> Click for videos!</p>
+<p id="infotext"><b style="display: block;">I do photoshoots.</b> <span class="onlyOnMobile">Press and hold to expand photos. </span>Click for videos!</p>
 
 <ul>
   <li>three slanted boxes overlapping</li>
