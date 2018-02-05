@@ -3,6 +3,10 @@ layout: default
 title: Modeling
 ---
 
+<!--
+Todo: onmouseover starts animating the background, swapping between different angles of the same shot
+-->
+
 <style>
 main{
   overflow: hidden;
@@ -67,6 +71,7 @@ main{
   #imgbox2{ left: 18vw; }
   #imgbox3{ left: 42vw; }
   #imgbox4{ left: 66vw; }
+  .imgbox{ top: auto; bottom: 20em; }
 }
 .imgbox .img{
   height: 100%;
@@ -106,17 +111,6 @@ main{
 
 <h2 id="infotitle">modeling</h2>
 <p id="infotext"><b style="display: block;">I do photoshoots.</b> <span class="onlyOnMobile">Press and hold to expand photos. </span>Click for videos!</p>
-
-<ul>
-  <li>three slanted boxes overlapping</li>
-  <li>onmouseover: <ul>
-      <li>Starts animating the background, swapping between different angles of the same shot</li>
-      <li>Expands the current one (that is, moves the adjacent ones away)</li>
-      <li>Each one is a clickable link to the relevant blog post</li>
-      <li>optional: start blackandwhite, go to color on hover</li>
-    </ul>
-  </li>
-</ul>
 
 <script>
 
